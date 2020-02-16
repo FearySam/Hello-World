@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> VIVIAN </title>
+    <link rel = "icon" href =  
+"https://i.pinimg.com/originals/48/70/17/487017397ddc03eb526de703da124b81.jpg" 
+        type = "image/x-icon"> 
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="pace.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</div>
+<div id="preloader">
+    <div class="p">LOADING</div>
+</div>
+<script>
+paceOptions = {
+ajax: true,
+document: true,
+eventLag: false
+};
+Pace.on('done', function() {
+$('.p').delay(500).animate({top: '30%', opacity: '0'}, 3000, $.bez([0.19,1,0.22,1]));
+
+
+$('#preloader').delay(1500).animate({top: '-100%'}, 2000, $.bez([0.19,1,0.22,1]));
+
+TweenMax.from(".title", 2, {
+     delay: 1.8,
+          y: 10,
+          opacity: 0,
+          ease: Expo.easeInOut
+    })
+});
+
+</script>
+</head>
+<body>
+
+
+    <header>
+      <div class="main">
+          <div class="logo">
+              <img src="E:\Personal Projects\dlogo.png">
+          </div>
+          <ul>
+              <li><a class="active" href="#">Home </a></li>
+                  <li><a href="#"> Features</a></li>
+                  <li><a href="#">Gallery </a></li>
+                  <li><a href="#">Pricing </a></li>
+                  <li><a href="#">Contact </a></li>
+                  <li><a class='Download' href="#"> Download</a>
+          </ul>
+      </div>
+  </header>
+
+<!-- <div class="title"></div>
+  <h1>VIVIAN</h1><br>***
+  <p></p> !-->
+
+</div>
+</body>
+</html>
